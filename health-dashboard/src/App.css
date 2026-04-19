@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #072635;
+  background-color: #f6f7fb;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --color-primary-text: #072635;
+  --color-secondary-text: #707070;
+  --color-bg: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-accent: #01f0d0;
+  --color-border: #e0e0e0;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 40px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --nav-height: 72px;
+  --sidebar-width: 280px;
+  --profile-width: 318px;
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: 0 2px 12px rgba(7, 38, 53, 0.06);
+}
+
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.loading-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-secondary-text);
+}
+
+.app-wrapper {
+  width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 367px 1fr 367px;
+  gap: 0 32px;
+  width: 100%;
+  flex: 1;
+  align-items: start;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+
+.content-column {
+  padding: var(--space-lg) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 0;
+}

@@ -1,0 +1,116 @@
+/* ── Outer container — XD: 766×349px, border-radius 16px ── */
+.diagnostic-list-container {
+  width: 766px;
+  min-height: 349px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 2px 12px rgba(7, 38, 53, 0.06);
+}
+
+/* ── Section title ── */
+.section-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--color-primary-text);
+  flex-shrink: 0;
+}
+
+/* ── Table wrapper ── */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ── Table ── */
+.diagnostic-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.diagnostic-table thead tr {
+  background: var(--color-bg);
+}
+
+.diagnostic-table th {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--color-primary-text);
+  text-align: left;
+  padding: 12px 16px;
+}
+
+/* Column widths */
+.diagnostic-table th:nth-child(1),
+.diagnostic-table td:nth-child(1) {
+  width: 35%;
+}
+
+.diagnostic-table th:nth-child(2),
+.diagnostic-table td:nth-child(2) {
+  width: 40%;
+}
+
+.diagnostic-table th:nth-child(3),
+.diagnostic-table td:nth-child(3) {
+  width: 25%;
+}
+
+/* ── Table cells ── */
+.diagnostic-table td {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--color-primary-text);
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.td-name {
+  font-weight: 700;
+}
+
+.td-desc {
+  color: var(--color-secondary-text);
+}
+
+.diagnostic-table tbody tr:hover {
+  background: var(--color-bg);
+}
+
+/* ── Status badges ── */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  white-space: nowrap;
+}
+
+.status-badge.active {
+  background: #fff0e0;
+  color: #d4700a;
+}
+
+.status-badge.cured {
+  background: #e6f9f1;
+  color: #1b9e57;
+}
+
+.status-badge.observation {
+  background: #eef0fd;
+  color: #5b68e0;
+}

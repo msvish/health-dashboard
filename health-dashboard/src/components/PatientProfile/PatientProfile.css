@@ -1,0 +1,201 @@
+.profile-column-wrapper {
+  width: 367px;
+  height: calc(100vh - var(--nav-height));
+  overflow-y: auto;
+  position: sticky;
+  top: var(--nav-height);
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+
+  /* Remove any right margin/padding pushing it inward */
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.profile-column-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+.profile-column-wrapper::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+/* ── Profile card ── */
+.profile-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ── Avatar: 200×200 per XD ── */
+.main-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* ── Name: ExtraBold 24px per XD ── */
+.profile-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #072635;
+  text-align: center;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+}
+
+/* ── Info list ── */
+.info-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ── Icons: 42×42 per XD ── */
+.info-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Label: Medium 14px per XD ── */
+.label {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #072635;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* ── Value: Bold 14px per XD ── */
+.value {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #072635;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* ── Button: 220×41, accent bg, pill shape per XD ── */
+.info-button {
+  width: 220px;
+  height: 41px;
+  background: #01f0d0;
+  border: none;
+  border-radius: 41px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #072635;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: opacity 0.18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-button:hover {
+  opacity: 0.85;
+}
+
+/* ── Lab results card ── */
+.lab-results {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* ── Lab title: ExtraBold 24px per XD ── */
+.lab-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #072635;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
+
+/* ── Lab rows ── */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.lab-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 315px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.lab-item:hover {
+  background: #f6f7fb;
+}
+
+/* ── Lab name: Regular 13px per XD ── */
+.lab-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #072635;
+  text-transform: capitalize;
+  letter-spacing: 0;
+}
+
+/* ── Download icon: 20×20 per XD ── */
+.download-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.lab-item:hover .download-icon {
+  opacity: 1;
+}
