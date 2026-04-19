@@ -1,38 +1,38 @@
 import "./DiagnosticList.css";
 
-const statusClass = (status) => {
+const getStatusClass = (status) => {
   if (!status) return "";
   const s = status.toLowerCase();
-  if (s.includes("under observation")) return "observation";
+  if (s.includes("observation")) return "observation";
   if (s.includes("cured")) return "cured";
-  return "active";
+  if (s.includes("inactive")) return "inactive";
+  return "observation";
 };
 
 const DiagnosticList = ({ diagnostics }) => {
-  if (!diagnostics || diagnostics.length === 0) return null;
+  if (!diagnostics) return null;
 
   return (
     <div className="diagnostic-list-container">
-      <h3 className="section-title">Diagnostic List</h3>
-      <div className="table-wrapper">
+      {/* Fixed title */}
+      <h3 className="diagnostic-title">Diagnostic List</h3>
+
+      {/* Fixed header — outside scroll wrapper */}
+      <div className="diagnostic-header-row">
+        <span className="col-problem">Problem/Diagnosis</span>
+        <span className="col-description">Description</span>
+        <span className="col-status">Status</span>
+      </div>
+
+      {/* Scrollable rows only */}
+      <div className="diagnostic-table-wrapper">
         <table className="diagnostic-table">
-          <thead>
-            <tr>
-              <th>Problem/Diagnosis</th>
-              <th>Description</th>
-              <th>Status</th>
-            </tr>
-          </thead>
           <tbody>
-            {diagnostics.map((item, index) => (
-              <tr key={index}>
-                <td className="td-name">{item.name}</td>
-                <td className="td-desc">{item.description}</td>
-                <td>
-                  <span className={`status-badge ${statusClass(item.status)}`}>
-                    {item.status}
-                  </span>
-                </td>
+            {diagnostics.map((item, i) => (
+              <tr key={i}>
+                <td className="col-problem">{item.name}</td>
+                <td className="col-description">{item.description}</td>
+                <td className="col-status">{item.status}</td>
               </tr>
             ))}
           </tbody>

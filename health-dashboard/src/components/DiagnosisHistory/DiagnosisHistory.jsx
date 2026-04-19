@@ -6,34 +6,31 @@ const DiagnosisHistory = ({ data }) => {
   const latest = data[0];
 
   return (
-    <div className="diagnosis-container card">
+    <div className="diagnosis-container">
       <h3 className="section-title">Diagnosis History</h3>
 
       {/* ── Blood pressure row ── */}
       <div className="chart-section-wrapper">
-        {/* Left: chart */}
+        {/* LEFT — chart */}
         <div className="chart-left">
           <div className="chart-header">
-            <h4 className="chart-title">Blood Pressure</h4>
+            <h4>Blood Pressure</h4>
             <div className="chart-period">
-              <span className="period-label">Last 6 months</span>
-              <img
-                src="/src/assets/expand_more.svg"
-                alt="expand"
-                className="expand-icon"
-              />
+              <span>Last 6 months</span>
+              <img src="/src/assets/expand.svg" alt="" />
             </div>
           </div>
-          <div className="chart-canvas-wrapper">
+          <div className="bp-chart-wrapper">
             <BloodPressureChart history={data} />
           </div>
         </div>
 
-        {/* Divider */}
+        {/* 39px spacer between chart and legends */}
         <div className="chart-divider" />
 
-        {/* Right: systolic + diastolic stats */}
+        {/* RIGHT — legends */}
         <div className="chart-right-stats">
+          {/* Systolic */}
           <div className="stat-item">
             <div className="stat-label">
               <span className="stat-dot systolic-dot" />
@@ -42,13 +39,21 @@ const DiagnosisHistory = ({ data }) => {
             <div className="stat-value">
               {latest.blood_pressure.systolic.value}
             </div>
-            <div className="stat-levels">
-              {latest.blood_pressure.systolic.levels}
+            <div className="stat-level-row">
+              <img
+                src="/src/assets/ArrowUp.svg"
+                alt="higher"
+                className="stat-arrow"
+              />
+              <span className="stat-levels">
+                {latest.blood_pressure.systolic.levels}
+              </span>
             </div>
           </div>
 
-          <hr className="stat-divider" />
+          <hr />
 
+          {/* Diastolic */}
           <div className="stat-item">
             <div className="stat-label">
               <span className="stat-dot diastolic-dot" />
@@ -57,8 +62,18 @@ const DiagnosisHistory = ({ data }) => {
             <div className="stat-value">
               {latest.blood_pressure.diastolic.value}
             </div>
-            <div className="stat-levels">
-              {latest.blood_pressure.diastolic.levels}
+            <div className="stat-level-row">
+              <img
+                src="/src/assets/ArrowUp.svg"
+                alt="lower"
+                className="stat-arrow"
+                style={{
+                  transform: "rotate(180deg)",
+                }} /* flipped for down arrow */
+              />
+              <span className="stat-levels">
+                {latest.blood_pressure.diastolic.levels}
+              </span>
             </div>
           </div>
         </div>
