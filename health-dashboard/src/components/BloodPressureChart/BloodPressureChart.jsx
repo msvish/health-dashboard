@@ -20,7 +20,6 @@ ChartJS.register(
 );
 
 const BloodPressureChart = ({ history }) => {
-  // Sort oldest → newest so the chart reads left-to-right chronologically
   const lastSixMonths = useMemo(() => {
     return [...history]
       .sort(
@@ -42,15 +41,15 @@ const BloodPressureChart = ({ history }) => {
         label: "Systolic",
         data: lastSixMonths.map((item) => item.blood_pressure.systolic.value),
         borderColor: "#C26EB4",
-        backgroundColor: "rgba(194,110,180,0.12)", // subtle fill under line
+        backgroundColor: "rgba(194,110,180,0.12)",
         pointBackgroundColor: "#C26EB4",
-        pointBorderColor: "#fff", // white ring around point
+        pointBorderColor: "#fff",
         pointBorderWidth: 2,
         pointRadius: 6,
         pointHoverRadius: 8,
         borderWidth: 2,
         tension: 0.4,
-        fill: true, // fill area below line
+        fill: true,
       },
       {
         label: "Diastolic",
@@ -87,7 +86,7 @@ const BloodPressureChart = ({ history }) => {
           font: { size: 12, family: "Manrope" },
           color: "#072635",
           maxRotation: 0,
-          align: "center", // matches XD text-align: center
+          align: "center",
         },
       },
       y: {
@@ -100,8 +99,8 @@ const BloodPressureChart = ({ history }) => {
         },
         grid: { color: "rgba(0,0,0,0.06)" },
         border: {
-          display: true, // the vertical line at x=0
-          color: "#CBC8D4", // subtle separator matching XD
+          display: true,
+          color: "#CBC8D4",
           width: 1,
         },
       },
@@ -119,7 +118,7 @@ const BloodPressureChart = ({ history }) => {
         }}
       ></div>
 
-      {/* Chart — wrapper div controls height, never the canvas */}
+      {/* Chart - wrapper div controls height, never the canvas */}
       <div style={{ position: "relative", height: "200px" }}>
         <Line data={data} options={options} />
       </div>

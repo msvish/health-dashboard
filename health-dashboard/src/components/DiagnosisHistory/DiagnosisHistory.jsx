@@ -25,7 +25,6 @@ const DiagnosisHistory = ({ data }) => {
           </div>
         </div>
 
-        {/* 39px spacer between chart and legends */}
         <div className="chart-divider" />
 
         {/* RIGHT — legends */}
@@ -69,7 +68,7 @@ const DiagnosisHistory = ({ data }) => {
                 className="stat-arrow"
                 style={{
                   transform: "rotate(180deg)",
-                }} /* flipped for down arrow */
+                }}
               />
               <span className="stat-levels">
                 {latest.blood_pressure.diastolic.levels}

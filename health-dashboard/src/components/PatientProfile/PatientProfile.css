@@ -1,4 +1,3 @@
-/* ── Profile card container: 367×740px, top:108px per XD ── */
 .profile-card-container {
   width: 367px;
   height: 702px;
@@ -13,7 +12,6 @@
   overflow: hidden;
 }
 
-/* ── Avatar: 200×200px per XD ── */
 .main-avatar {
   width: 200px;
   height: 200px;
@@ -23,7 +21,6 @@
   flex-shrink: 0;
 }
 
-/* ── Name: ExtraBold 24px per XD ── */
 .profile-name {
   font-family: "Manrope", sans-serif;
   font-weight: 800;
@@ -36,7 +33,6 @@
   flex-shrink: 0;
 }
 
-/* ── Info list ── */
 .info-list {
   width: 100%;
   display: flex;
@@ -53,7 +49,6 @@
   gap: 16px;
 }
 
-/* ── Icons: 42×42px per XD ── */
 .info-icon {
   width: 42px;
   height: 42px;
@@ -67,7 +62,6 @@
   gap: 4px;
 }
 
-/* ── Label: Medium 14px per XD ── */
 .label {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
@@ -79,7 +73,6 @@
   margin: 0;
 }
 
-/* ── Value: Bold 14px per XD ── */
 .value {
   font-family: "Manrope", sans-serif;
   font-weight: 700;

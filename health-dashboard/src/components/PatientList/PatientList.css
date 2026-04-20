@@ -1,27 +1,23 @@
-/* ── Container: 367×1054px, border-radius 16px per XD ── */
 .patient-list-container {
   width: 367px;
   background: #ffffff;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  height: 1054px; /* ← total height minus 122px from top */
+  height: 1054px;
   position: sticky;
   overflow: hidden;
-  margin: 32px 0 16px 0px; /* ← 16px gap from left edge, matches left:18px in XD */
+  margin: 32px 0 16px 0px;
 }
 
-/* ── Header ── */
 .list-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* title left: 38px from container, search right: 347px from page = ~18px from container right */
   padding: 20px 20px 16px 20px;
   flex-shrink: 0;
 }
 
-/* ── Title: ExtraBold 24px per XD ── */
 .list-title {
   font-family: "Manrope", sans-serif;
   font-weight: 800;
@@ -31,7 +27,6 @@
   letter-spacing: 0;
 }
 
-/* ── Search icon: 18×18px per XD ── */
 .search-icon {
   width: 18px;
   height: 18px;
@@ -50,34 +45,29 @@
   flex: 1;
 }
 
-/* ── Scrollbar width: 6px per XD ── */
 .patients-scroll-area::-webkit-scrollbar {
   width: 6px;
 }
 
-/* ── Track: transparent, no background per XD ── */
 .patients-scroll-area::-webkit-scrollbar-track {
   background: #e0e0e0;
   border-radius: 3px;
 }
 
-/* ── Thumb: #072635, 6×100px, border-radius 3px per XD ── */
 .patients-scroll-area::-webkit-scrollbar-thumb {
   background: #072635;
   border-radius: 3px;
-  min-height: 100px; /* thumb height per XD */
+  min-height: 100px;
 }
 
 .patients-scroll-area::-webkit-scrollbar-thumb:hover {
   background: #0a3a52;
 }
 
-/* ── Patient row: 317×48px content area per XD ── */
 .patient-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  /* left: 38px from container edge */
   padding: 12px 20px 12px 20px;
   cursor: pointer;
   transition: background 0.15s;
@@ -92,7 +82,6 @@
   background: #d8fcf7;
 }
 
-/* ── Avatar: 48×48px per XD ── */
 .patient-avatar {
   width: 48px;
   height: 48px;
@@ -101,7 +90,6 @@
   flex-shrink: 0;
 }
 
-/* ── Info block ── */
 .patient-info {
   display: flex;
   flex-direction: column;
@@ -110,7 +98,6 @@
   min-width: 0;
 }
 
-/* ── Name: Bold 14px per XD ── */
 .patient-name {
   font-family: "Manrope", sans-serif;
   font-weight: 700;
@@ -123,7 +110,6 @@
   text-overflow: ellipsis;
 }
 
-/* ── Meta: Regular 14px, #707070 per XD ── */
 .patient-meta {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -133,7 +119,6 @@
   letter-spacing: 0;
 }
 
-/* ── More icon: 18×4px per XD ── */
 .more-icon {
   width: 18px;
   height: 4px;

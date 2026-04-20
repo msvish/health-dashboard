@@ -42,7 +42,7 @@ function App() {
       {/* Navbar spans full width above the grid */}
       <Sidebar />
 
-      {/* 3-column grid below */}
+      {/* 3-column grid below  */}
       <div className="main-layout">
         <PatientList patients={allPatients} />
         <main className="content-column">
