@@ -5,6 +5,7 @@ import PatientList from "./components/PatientList/PatientList";
 import DiagnosisHistory from "./components/DiagnosisHistory/DiagnosisHistory";
 import DiagnosticList from "./components/DiagnosticList/DiagnosticList";
 import PatientProfile from "./components/PatientProfile/PatientProfile";
+import LabResults from "./components/LabResults/LabResults";
 import "./App.css";
 
 function App() {
@@ -48,7 +49,10 @@ function App() {
           <DiagnosisHistory data={jessicaData?.diagnosis_history} />
           <DiagnosticList diagnostics={jessicaData?.diagnostic_list} />
         </main>
-        <PatientProfile profile={jessicaData} />
+        <div className="profile-column">
+          <PatientProfile profile={jessicaData} />
+          <LabResults results={jessicaData?.lab_results} />
+        </div>
       </div>
     </div>
   );

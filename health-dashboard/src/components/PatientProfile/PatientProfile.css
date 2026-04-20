@@ -1,49 +1,26 @@
-.profile-column-wrapper {
+/* ── Profile card container: 367×740px, top:108px per XD ── */
+.profile-card-container {
   width: 367px;
-  height: calc(100vh - var(--nav-height));
-  overflow-y: auto;
-  position: sticky;
-  top: var(--nav-height);
-  background: var(--color-surface);
-  border-left: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px 20px 20px 20px;
-  border-radius: 16px;
-  opacity: 1;
-
-  /* Remove any right margin/padding pushing it inward */
-  margin-right: 0;
-  margin-left: auto;
-}
-
-.profile-column-wrapper::-webkit-scrollbar {
-  width: 4px;
-}
-.profile-column-wrapper::-webkit-scrollbar-thumb {
-  background: var(--color-border);
-  border-radius: 4px;
-}
-
-/* ── Profile card ── */
-.profile-card {
+  height: 702px;
   background: #ffffff;
   border-radius: 16px;
+  padding: 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
-/* ── Avatar: 200×200 per XD ── */
+/* ── Avatar: 200×200px per XD ── */
 .main-avatar {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
   margin-bottom: 16px;
+  flex-shrink: 0;
 }
 
 /* ── Name: ExtraBold 24px per XD ── */
@@ -56,6 +33,7 @@
   text-align: center;
   letter-spacing: 0;
   margin-bottom: 24px;
+  flex-shrink: 0;
 }
 
 /* ── Info list ── */
@@ -66,6 +44,7 @@
   gap: 20px;
   text-align: left;
   margin-bottom: 24px;
+  flex-shrink: 0;
 }
 
 .info-item {
@@ -74,7 +53,7 @@
   gap: 16px;
 }
 
-/* ── Icons: 42×42 per XD ── */
+/* ── Icons: 42×42px per XD ── */
 .info-icon {
   width: 42px;
   height: 42px;
@@ -112,7 +91,16 @@
   margin: 0;
 }
 
-/* ── Button: 220×41, accent bg, pill shape per XD ── */
+.info-button-wrapper {
+  width: 300px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
 .info-button {
   width: 220px;
   height: 41px;
@@ -130,73 +118,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .info-button:hover {
   opacity: 0.85;
-}
-
-/* ── Lab results card ── */
-.lab-results {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 16px;
-}
-
-/* ── Lab title: ExtraBold 24px per XD ── */
-.lab-title {
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 33px;
-  color: #072635;
-  letter-spacing: 0;
-  margin-bottom: 16px;
-}
-
-/* ── Lab rows ── */
-.results-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.lab-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 315px;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 0;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-
-.lab-item:hover {
-  background: #f6f7fb;
-}
-
-/* ── Lab name: Regular 13px per XD ── */
-.lab-name {
-  font-family: "Manrope", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
-  color: #072635;
-  text-transform: capitalize;
-  letter-spacing: 0;
-}
-
-/* ── Download icon: 20×20 per XD ── */
-.download-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  opacity: 0.5;
-  transition: opacity 0.15s;
-}
-
-.lab-item:hover .download-icon {
-  opacity: 1;
 }

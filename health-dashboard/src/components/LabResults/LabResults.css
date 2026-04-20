@@ -1,0 +1,92 @@
+/* ── Lab results container: 367×740px, top:108px per XD ── */
+.lab-results-container {
+  width: 367px;
+  height: 296px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* ── Fixed title: ExtraBold 24px per XD ── */
+.lab-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #072635;
+  letter-spacing: 0;
+  width: 137px;
+  height: 33px;
+  flex-shrink: 0; /* title never moves */
+  margin-bottom: 16px;
+}
+
+.lab-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden; /* ← add this */
+  padding-right: 26px;
+}
+
+/* ── Custom scrollbar: 6×207px track, 6×51px thumb per XD ── */
+.lab-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lab-scroll-area::-webkit-scrollbar-track {
+  background: #e3e4e6;
+  border-radius: 3px;
+}
+
+.lab-scroll-area::-webkit-scrollbar-thumb {
+  background: #072635;
+  border-radius: 3px;
+  min-height: 51px; /* thumb height per XD */
+}
+
+/* ── Lab row: 315×40px per XD ── */
+/* ── Lab row ── */
+.lab-item {
+  width: 100%; /* ← was 315px, now fills container */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.lab-item:hover {
+  background: #f6f7fb;
+}
+
+/* ── Lab name: Regular 13px per XD ── */
+.lab-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #072635;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  padding: 0px 0px 0px 20px;
+}
+
+/* ── Download icon: 20×20px, 193px from text per XD ── */
+.download-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+  margin-left: auto; /* pushes icon to right edge */
+}
+
+.lab-item:hover .download-icon {
+  opacity: 1;
+}
