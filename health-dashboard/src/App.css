@@ -67,6 +67,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .main-layout {
@@ -81,22 +82,21 @@ body {
 }
 
 .content-column {
-  padding: var(--space-lg) 0;
+  padding: var(--space-xl) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
   min-width: 0;
 }
 
 .profile-column {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
   padding: 16px 16px 16px 0;
   position: sticky;
   top: var(--nav-height);
   height: calc(100vh - var(--nav-height));
-  overflow-y: auto;
 }
 
 .profile-column::-webkit-scrollbar {

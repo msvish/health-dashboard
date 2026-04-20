@@ -5,11 +5,10 @@
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 122px); /* ← total height minus 122px from top */
+  height: 1054px; /* ← total height minus 122px from top */
   position: sticky;
-  top: 122px; /* ← sticks 122px from the top of viewport */
   overflow: hidden;
-  margin: 16px 0 16px 16px; /* ← 16px gap from left edge, matches left:18px in XD */
+  margin: 32px 0 16px 0px; /* ← 16px gap from left edge, matches left:18px in XD */
 }
 
 /* ── Header ── */
@@ -46,19 +45,31 @@
   opacity: 1;
 }
 
-/* ── Scroll area ── */
 .patients-scroll-area {
   overflow-y: auto;
   flex: 1;
 }
 
+/* ── Scrollbar width: 6px per XD ── */
 .patients-scroll-area::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 
-.patients-scroll-area::-webkit-scrollbar-thumb {
+/* ── Track: transparent, no background per XD ── */
+.patients-scroll-area::-webkit-scrollbar-track {
   background: #e0e0e0;
-  border-radius: 4px;
+  border-radius: 3px;
+}
+
+/* ── Thumb: #072635, 6×100px, border-radius 3px per XD ── */
+.patients-scroll-area::-webkit-scrollbar-thumb {
+  background: #072635;
+  border-radius: 3px;
+  min-height: 100px; /* thumb height per XD */
+}
+
+.patients-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: #0a3a52;
 }
 
 /* ── Patient row: 317×48px content area per XD ── */

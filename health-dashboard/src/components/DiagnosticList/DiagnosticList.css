@@ -63,7 +63,8 @@
 }
 
 .diagnostic-table-wrapper::-webkit-scrollbar-track {
-  background: transparent;
+  background: #e0e0e0;
+  border-radius: 3px;
 }
 
 .diagnostic-table-wrapper::-webkit-scrollbar-thumb {
