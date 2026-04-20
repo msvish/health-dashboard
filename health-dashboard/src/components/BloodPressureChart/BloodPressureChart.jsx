@@ -73,7 +73,7 @@ const BloodPressureChart = ({ history }) => {
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
-      mode: "index", // tooltip shows both values at the same x
+      mode: "index",
       intersect: false,
     },
     plugins: {
@@ -83,20 +83,33 @@ const BloodPressureChart = ({ history }) => {
       x: {
         grid: { display: false },
         border: { display: false },
-        ticks: { font: { size: 11 }, color: "#888", maxRotation: 0 },
+        ticks: {
+          font: { size: 12, family: "Manrope" },
+          color: "#072635",
+          maxRotation: 0,
+          align: "center", // matches XD text-align: center
+        },
       },
       y: {
         min: 60,
         max: 180,
-        ticks: { stepSize: 20, font: { size: 11 }, color: "#888" },
+        ticks: {
+          stepSize: 20,
+          font: { size: 12, family: "Manrope" },
+          color: "#072635",
+        },
         grid: { color: "rgba(0,0,0,0.06)" },
-        border: { display: false },
+        border: {
+          display: true, // the vertical line at x=0
+          color: "#CBC8D4", // subtle separator matching XD
+          width: 1,
+        },
       },
     },
   };
 
   return (
-    <div style={{ background: "#F4F0FD", borderRadius: 16, padding: 24 }}>
+    <div style={{ background: "#F4F0FD", borderRadius: 16 }}>
       {/* Custom legend showing live latest values */}
       <div
         style={{
