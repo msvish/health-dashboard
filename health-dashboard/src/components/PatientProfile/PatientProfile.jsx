@@ -40,7 +40,7 @@ const PatientProfile = ({ profile }) => {
   if (!profile) return null;
 
   return (
-    <div className="profile-column-wrapper card">
+    <div className="profile-column-wrapper">
       {/* ── Profile card ── */}
       <div className="profile-card">
         <img

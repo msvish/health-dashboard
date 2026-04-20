@@ -14,7 +14,7 @@ const DiagnosisHistory = ({ data }) => {
         {/* LEFT — chart */}
         <div className="chart-left">
           <div className="chart-header">
-            <h4>Blood Pressure</h4>
+            <h4 style={{ whiteSpace: "nowrap" }}>Blood Pressure</h4>
             <div className="chart-period">
               <span>Last 6 months</span>
               <img src="/src/assets/expand.svg" alt="" />
