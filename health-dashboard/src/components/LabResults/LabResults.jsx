@@ -1,4 +1,5 @@
 import "./LabResults.css";
+import downloadIcon from "../../assets/download.svg";
 
 const LabResults = ({ results }) => {
   if (!results) return null;
@@ -11,11 +12,7 @@ const LabResults = ({ results }) => {
         {results.map((result, i) => (
           <div key={i} className="lab-item">
             <span className="lab-name">{result}</span>
-            <img
-              src="/src/assets/download.svg"
-              alt="download"
-              className="download-icon"
-            />
+            <img src={downloadIcon} alt="download" className="download-icon" />
           </div>
         ))}
       </div>

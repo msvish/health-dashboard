@@ -1,35 +1,37 @@
 import "./PatientProfile.css";
+import birthIcon from "../../assets/BirthIcon.svg";
+import femaleIcon from "../../assets/female.svg";
+import maleIcon from "../../assets/male.svg";
+import phoneIcon from "../../assets/phone.svg";
+import insuranceIcon from "../../assets/insurance.svg";
 
 const infoItems = (profile) => [
   {
-    icon: "/src/assets/BirthIcon.svg",
+    icon: birthIcon,
     alt: "date of birth",
     label: "Date of Birth",
     value: profile.date_of_birth,
   },
   {
-    icon:
-      profile.gender === "Female"
-        ? "/src/assets/female.svg"
-        : "/src/assets/male.svg",
+    icon: profile.gender === "Female" ? femaleIcon : maleIcon,
     alt: "gender",
     label: "Gender",
     value: profile.gender,
   },
   {
-    icon: "/src/assets/phone.svg",
+    icon: phoneIcon,
     alt: "contact",
     label: "Contact Info.",
     value: profile.phone_number,
   },
   {
-    icon: "/src/assets/phone.svg",
+    icon: phoneIcon,
     alt: "emergency contact",
     label: "Emergency Contact",
     value: profile.emergency_contact,
   },
   {
-    icon: "/src/assets/insurance.svg",
+    icon: insuranceIcon,
     alt: "insurance",
     label: "Insurance Provider",
     value: profile.insurance_type,

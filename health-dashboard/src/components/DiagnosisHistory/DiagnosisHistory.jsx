@@ -1,4 +1,10 @@
 import BloodPressureChart from "../BloodPressureChart/BloodPressureChart";
+import expandIcon from "../../assets/expand.svg";
+import arrowUpIcon from "../../assets/ArrowUp.svg";
+import arrowDownIcon from "../../assets/ArrowDown.svg";
+import temperatureIcon from "../../assets/temperature.svg";
+import heartRateIcon from "../../assets/heart_rate.svg";
+import respiratoryRateIcon from "../../assets/respiratory_rate.svg";
 import "./DiagnosisHistory.css";
 
 const DiagnosisHistory = ({ data }) => {
@@ -17,7 +23,7 @@ const DiagnosisHistory = ({ data }) => {
             <h4 style={{ whiteSpace: "nowrap" }}>Blood Pressure</h4>
             <div className="chart-period">
               <span>Last 6 months</span>
-              <img src="/src/assets/expand.svg" alt="" />
+              <img src={expandIcon} alt="" />
             </div>
           </div>
           <div className="bp-chart-wrapper">
@@ -39,11 +45,7 @@ const DiagnosisHistory = ({ data }) => {
               {latest.blood_pressure.systolic.value}
             </div>
             <div className="stat-level-row">
-              <img
-                src="/src/assets/ArrowUp.svg"
-                alt="higher"
-                className="stat-arrow"
-              />
+              <img src={arrowUpIcon} alt="higher" className="stat-arrow" />
               <span className="stat-levels">
                 {latest.blood_pressure.systolic.levels}
               </span>
@@ -63,7 +65,7 @@ const DiagnosisHistory = ({ data }) => {
             </div>
             <div className="stat-level-row">
               <img
-                src="/src/assets/ArrowUp.svg"
+                src={arrowDownIcon}
                 alt="lower"
                 className="stat-arrow"
                 style={{
@@ -82,7 +84,7 @@ const DiagnosisHistory = ({ data }) => {
       <div className="metrics-grid">
         <div className="metric-card respiratory">
           <img
-            src="/src/assets/respiratory_rate.svg"
+            src={respiratoryRateIcon}
             alt="respiratory rate"
             className="metric-icon"
           />
@@ -93,7 +95,7 @@ const DiagnosisHistory = ({ data }) => {
 
         <div className="metric-card temperature">
           <img
-            src="/src/assets/temperature.svg"
+            src={temperatureIcon}
             alt="temperature"
             className="metric-icon"
           />
@@ -103,11 +105,7 @@ const DiagnosisHistory = ({ data }) => {
         </div>
 
         <div className="metric-card heart-rate">
-          <img
-            src="/src/assets/heart_rate.svg"
-            alt="heart rate"
-            className="metric-icon"
-          />
+          <img src={heartRateIcon} alt="heart rate" className="metric-icon" />
           <p className="metric-name">Heart Rate</p>
           <p className="metric-value">{latest.heart_rate.value} bpm</p>
           <p className="metric-status">{latest.heart_rate.levels}</p>

@@ -1,11 +1,20 @@
 import "./Sidebar.css";
+import homeIcon from "../../assets/home.svg";
+import groupIcon from "../../assets/group.svg";
+import calendarIcon from "../../assets/calendar.svg";
+import chatIcon from "../../assets/chat.svg";
+import creditCardIcon from "../../assets/credit_card.svg";
+import testLogoIcon from "../../assets/TestLogo.svg";
+import seniorWomanDoctorIcon from "../../assets/senior_woman_doctor.png";
+import moreVertIcon from "../../assets/more_vert.svg";
+import settingsIcon from "../../assets/settings.svg";
 
 const navLinks = [
-  { label: "Overview", icon: "src/assets/home.svg" },
-  { label: "Patients", icon: "src/assets/group.svg" },
-  { label: "Schedule", icon: "src/assets/calendar.svg" },
-  { label: "Message", icon: "src/assets/chat.svg" },
-  { label: "Transactions", icon: "src/assets/credit_card.svg" },
+  { label: "Overview", icon: homeIcon },
+  { label: "Patients", icon: groupIcon },
+  { label: "Schedule", icon: calendarIcon },
+  { label: "Message", icon: chatIcon },
+  { label: "Transactions", icon: creditCardIcon },
 ];
 
 const Sidebar = () => {
@@ -14,7 +23,7 @@ const Sidebar = () => {
       <nav className="navbar">
         {/* Logo — 211×48px from XD */}
         <div className="navbar-logo">
-          <img src="src/assets/TestLogo.svg" alt="Tech.Care" />
+          <img src={testLogoIcon} alt="Tech.Care" />
         </div>
 
         {/* Nav links */}
@@ -33,7 +42,7 @@ const Sidebar = () => {
         {/* Doctor + settings */}
         <div className="navbar-user">
           <img
-            src="src/assets/senior_woman_doctor.png"
+            src={seniorWomanDoctorIcon}
             alt="Dr. Jose Simmons"
             className="navbar-avatar"
           />
@@ -44,10 +53,10 @@ const Sidebar = () => {
           <div className="navbar-divider" />
           <div className="navbar-actions">
             <button className="icon-btn" aria-label="Settings">
-              <img src="src/assets/settings.svg" alt="settings_icon" />
+              <img src={settingsIcon} alt="settings_icon" />
             </button>
             <button className="icon-btn" aria-label="More options">
-              <img src="src/assets/more_vert.svg" alt="more_vert_icon" />
+              <img src={moreVertIcon} alt="more_vert_icon" />
             </button>
           </div>
         </div>
